@@ -1,7 +1,13 @@
 let content = document.getElementById("count-el"); 
+let savedContent = document.getElementById("saved-content");
 
+let count = 0;
 function increment(){
-    let count;
-    count =+ 1;
-    content.textContent = count;
+    count = count + 1;
+    content.innerText = count;
+}
+
+function save(){
+    savedContent.innerText = "Your saved score is:" + count;
+    console.log("Saved!")
 }
