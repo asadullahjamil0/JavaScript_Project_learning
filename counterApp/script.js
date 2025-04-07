@@ -14,3 +14,8 @@ function save() {
     content.innerHTML = 0;
     count = 0;
 }
+
+let firstName = "AsadUllah";
+let lastName = "Jamil";
+let fullName = `${firstName} ${lastName}`;
+console.log(fullName);
