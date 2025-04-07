@@ -15,7 +15,18 @@ function save() {
     count = 0;
 }
 
-let firstName = "AsadUllah";
-let lastName = "Jamil";
-let fullName = `${firstName} ${lastName}`;
-console.log(fullName);
+// let firstName = "AsadUllah";
+// let lastName = "Jamil";
+// let fullName = `${firstName} ${lastName}`;
+// console.log(fullName);
+
+let myPoints = 3;
+
+function add3Points() {
+    return myPoints += 3;
+}
+
+function remove1Point() {
+    return myPoints -= 1;
+}
+console.log(myPoints);
