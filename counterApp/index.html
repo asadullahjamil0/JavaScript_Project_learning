@@ -9,19 +9,21 @@
 </head>
 
 <body>
-    <div class="box">
+    <div id="dtls">
         <details>
             <summary>Details</summary>
             <h1>Welcome to <del>the</del> Increment App</h1>
         </details>
+    </div>
+    <div class="box">
        
         <h1>Numbered Entered:</h1>
         <h2 id="count-el">0</h2>
         <div>
             <button onclick="increment()" class="btn">Increment</button>
-            <button onclick="save()" class="btn">Save</button>
+            <button style="background-color: rgb(0, 132, 0);" onclick="save()" class="btn">Save</button>
         </div>
-        <h1 id="saved-content">Score</h1>
+        <h1 id="saved-content">Current Entry: </h1>
         <h2 id="previousEn">previous Entries: </h2>
         <h1 id="welcomeEl"></h1>
     </div>
