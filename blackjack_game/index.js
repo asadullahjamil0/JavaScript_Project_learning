@@ -5,9 +5,9 @@ let isAllive = true;
 let message = "";
 let messageEl = document.getElementById("message-el");
 let sumEl = document.getElementById("sum-el");
-
+let cardsEl = document.getElementById("cards-el");
 let sum = firstCard + secondCard;
-console.log(sum);
+
 
 function startGame(){
 
@@ -21,7 +21,12 @@ function startGame(){
         isAllive = true;
     }   
     messageEl.textContent = message;
-    sumEl.textContent = "Sum:" + sum;
+    sumEl.innerText = `Sum:${sum}`;
+    cardsEl.innerHTML =  `Cards: ${firstCard} ${secondCard}`
 }
 
+function newCard(){
+    console.log("New Card created!");
+    
+}
 
