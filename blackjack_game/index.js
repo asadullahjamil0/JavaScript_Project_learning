@@ -8,8 +8,11 @@ let sumEl = document.getElementById("sum-el");
 let cardsEl = document.getElementById("cards-el");
 let sum = firstCard + secondCard;
 
+function startGame(){
+    renderGame();
+}
 
-function startGame() {
+function renderGame() {
 
     sumEl.innerText = `Sum:${sum}`;
     cardsEl.innerHTML = `Cards: ${firstCard} ${secondCard}`;
@@ -28,6 +31,6 @@ function startGame() {
 function newCard() {
     let card = Math.floor(Math.random() * 10) + 2;
     sum += card;
-    startGame();
+    renderGame();
 }
 
