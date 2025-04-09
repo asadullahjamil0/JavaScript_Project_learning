@@ -9,8 +9,10 @@ let cardsEl = document.getElementById("cards-el");
 let sum = firstCard + secondCard;
 
 
-function startGame(){
+function startGame() {
 
+    sumEl.innerText = `Sum:${sum}`;
+    cardsEl.innerHTML = `Cards: ${firstCard} ${secondCard}`;
     if (sum <= 20) {
         message = "Do you want to draw a new card?";
     } else if (sum === 21) {
@@ -19,14 +21,13 @@ function startGame(){
     } else {
         message = "You're out of game!";
         isAllive = true;
-    }   
+    }
     messageEl.textContent = message;
-    sumEl.innerText = `Sum:${sum}`;
-    cardsEl.innerHTML =  `Cards: ${firstCard} ${secondCard}`
 }
 
-function newCard(){
-    console.log("New Card created!");
-    
+function newCard() {
+    let card = Math.floor(Math.random() * 10) + 2;
+    sum += card;
+    startGame();
 }
 
