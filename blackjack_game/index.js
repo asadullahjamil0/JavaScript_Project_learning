@@ -9,14 +9,17 @@ let sumEl = document.getElementById("sum-el");
 let cardsEl = document.getElementById("cards-el");
 let sum = cards[0] + cards[1];
 
-function startGame(){
+function startGame() {
     renderGame();
 }
 
 function renderGame() {
 
     sumEl.innerText = `Sum:${sum}`;
-    cardsEl.innerHTML = `Cards: ${cards[0]} ${cards[1]}`;
+
+    for(let i = 0; i < cards.length; i++){
+        cardsEl.textContent += ` ${cards[i]}`;
+    }
     if (sum <= 20) {
         message = "Do you want to draw a new card?";
     } else if (sum === 21) {
@@ -33,6 +36,7 @@ function newCard() {
     let card = Math.floor(Math.random() * 10) + 2;
     cards.push(card);
     sum += cards[2];
+    cardsEl.innerHTML =  "Cards: ";
     renderGame(); 
 }
 
