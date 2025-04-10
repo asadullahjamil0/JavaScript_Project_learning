@@ -1,11 +1,20 @@
 let cards = []
+let sum = 0;
 let hasBlackJack = false;
 let isAllive = false;
 let message = "";
 let messageEl = document.getElementById("message-el");
 let sumEl = document.getElementById("sum-el");
 let cardsEl = document.getElementById("cards-el");
-let sum = 0;
+let nameEl = document.getElementById("name-el");
+
+let player = {
+    playerName: "per",
+    playerChips: 145
+}
+
+nameEl.innerHTML = player.playerName + ": $" + player.playerChips;
+
 
 
 function getRandomCard() {
