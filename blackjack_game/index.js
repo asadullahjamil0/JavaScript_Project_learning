@@ -7,18 +7,12 @@ let sumEl = document.getElementById("sum-el");
 let cardsEl = document.getElementById("cards-el");
 let sum = 0;
 
-function rollDice() {
-    let randomNumber = Math.floor(Math.random() * 6) + 1;
-    return randomNumber;
-}
 
 function getRandomCard() {
     let randomNumber = Math.floor(Math.random() * 13) + 1;
     if (randomNumber === 1) {
-        console.log(randomNumber);
         return 11;
     } else if (randomNumber > 10) {
-        console.log(randomNumber)
         return 10;
     } else {
         return randomNumber;
@@ -30,8 +24,8 @@ function startGame() {
     let firstCard = getRandomCard();
     let secondCard = getRandomCard();
     cards.push(firstCard);
-    cards = [firstCard , secondCard]
-    sum = cards[0] + cards[1];
+    cards = [firstCard, secondCard]
+    sum = firstCard + secondCard;
 
     renderGame();
 }
@@ -58,9 +52,11 @@ function renderGame() {
 }
 
 function newCard() {
-    let card = getRandomCard();
-    cards.push(card);
-    sum += cards[2];
-    renderGame();
+    if (isAllive === true && hasBlackJack === false) {
+        let card = getRandomCard();
+        cards.push(card);
+        sum += card;
+        renderGame();
+    }
 }
 
