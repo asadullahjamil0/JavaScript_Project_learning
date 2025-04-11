@@ -13,7 +13,7 @@ let player = {
     playerChips: 145
 }
 
-nameEl.innerHTML = player.playerName + ": $" + player.playerChips;
+nameEl.innerHTML = `${player.playerName}: $${player.playerChips}`;
 
 
 
