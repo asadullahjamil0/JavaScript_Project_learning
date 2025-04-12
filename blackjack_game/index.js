@@ -9,7 +9,7 @@ let cardsEl = document.getElementById("cards-el");
 let nameEl = document.getElementById("name-el");
 
 let player = {
-    playerName: "per",
+    playerName: "Jack",
     playerChips: 145
 }
 
@@ -32,7 +32,6 @@ function startGame() {
     isAllive = true;
     let firstCard = getRandomCard();
     let secondCard = getRandomCard();
-    cards.push(firstCard);
     cards = [firstCard, secondCard]
     sum = firstCard + secondCard;
 
@@ -56,6 +55,8 @@ function renderGame() {
     } else {
         message = "You're out of game!";
         isAllive = false;
+        player.playerChips = 100;
+        nameEl.innerHTML = `${player.playerName}: $${player.playerChips}`;
     }
     messageEl.textContent = message;
 }
