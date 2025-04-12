@@ -11,5 +11,5 @@ The 5 largest countries in the world:
 */
 
 for (let i = 0; i < largeCountries.length; i++) {
-    console.log(`Number ${i + 1}: ${largeCountries[i]}`);
+    console.log(`${i + 1}-${largeCountries[i]}`);
 }
