@@ -13,7 +13,18 @@ inputBtn.addEventListener('click', function () {
 
 
 for (let i = 0; i < myLead.length; i++) {
-    ulEl.innerHTML += `<li>${myLead[i]}</li>`;
+    // ulEl.innerHTML += `<li>${myLead[i]}</li>`;
+
+    //Another way to create elements
+    const li = document.createElement("li");
+    li.textContent = myLead[i];
+    ulEl.append(li);
 }
+
+renderBtn.addEventListener('click', function (){
+    renderBtn.innerHTML = "Thank you for buying!";
+    
+})
+renderBtn.innerHTML = "<button>Buy</button>";
 
 
