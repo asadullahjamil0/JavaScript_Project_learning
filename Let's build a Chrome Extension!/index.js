@@ -5,22 +5,15 @@ const ulEl = document.getElementById("ul-el");
 
 inputBtn.addEventListener('click', function () {
     myLead.push(inputEl.value);
-    renderFunction();
+    renderLeads();
     inputEl.value = "";
 })
 
 
-function renderFunction() {
-    let listItem = "";
+function renderLeads() {
+    let listItems = "";
     for (let i = 0; i < myLead.length; i++) {
-        // ulEl.innerHTML += `<li>${myLead[i]}</li>`;
-
-        //Another way to create elements
-        // const li = document.createElement("li");
-        // li.textContent = myLead[i];
-        // ulEl.append(li);
-
-        listItem += `<li>${myLead[i]}</li>`
+        listItems += `<li><a href="https://${myLead[i]}" target="_blank">${myLead[i]}</a></li>`
     }
-    ulEl.innerHTML = listItem;
+    ulEl.innerHTML = listItems;
 }
