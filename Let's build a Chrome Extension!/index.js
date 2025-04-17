@@ -32,7 +32,7 @@ function render(leads) {
   }
   ulEl.innerHTML = listItems;
   console.log(ulEl.textContent);
-  
+
 }
 
 
