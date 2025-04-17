@@ -31,13 +31,21 @@ function render(leads) {
     </li>`
   }
   ulEl.innerHTML = listItems;
+  console.log(ulEl.textContent);
+  
 }
 
+
+
 inputBtn.addEventListener('click', function () {
-  myLead.push(inputEl.value);
+  let inputVal = inputEl.value.trim();
+  if (!inputVal.startsWith("https://") && !inputVal.startsWith("http://")) {
+    inputVal = "https://" + inputVal;
+  }
+
+  myLead.push(inputVal);
 
   localStorage.setItem("myLead", JSON.stringify(myLead));
-
   render(myLead);
   inputEl.value = "";
 })
