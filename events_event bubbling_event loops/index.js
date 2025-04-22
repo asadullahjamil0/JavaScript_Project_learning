@@ -1,6 +1,9 @@
 const btn = document.querySelector(".btn");
 const cntr = document.querySelector(".container");
 const output = document.getElementById("pre");
+const displayBtn = document.getElementById("display-btn");
+const divEl = document.getElementById("div-el");
+const videoEl = document.getElementById("video-el");
 
 function randomNumber() {
     let rndm = Math.floor(Math.random() * 255) + 1;
@@ -19,6 +22,18 @@ cntr.addEventListener('click', (e) => {
 })
 
 //Event Bubbling
-btn.addEventListener('click', handleClick);
-document.body.addEventListener('click', handleClick);
-cntr.addEventListener('click', handleClick);
+// btn.addEventListener('click', handleClick);
+// document.body.addEventListener('click', handleClick);
+// cntr.addEventListener('click', handleClick);
+
+displayBtn.addEventListener('click', function(){
+    divEl.classList.remove("hidden");
+})
+
+videoEl.addEventListener("click", ()=>{
+    videoEl.play();
+})
+
+divEl.addEventListener('click', ()=>{
+    divEl.classList.add("hidden");
+})
