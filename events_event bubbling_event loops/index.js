@@ -12,9 +12,9 @@ function randomNumber() {
 
 function handleClick(e) {
     output.textContent += `You clicked on a ${e.currentTarget.tagName} element\n`;
-  }
+}
 
-cntr.addEventListener('click', (e) => {
+cntr.addEventListener('click', function addColor(e) {
     console.log(e);
     let rndmClr = `rgb(${randomNumber()}, ${randomNumber()}, ${randomNumber()})`;
     document.body.style.backgroundColor = rndmClr;
@@ -26,14 +26,15 @@ cntr.addEventListener('click', (e) => {
 // document.body.addEventListener('click', handleClick);
 // cntr.addEventListener('click', handleClick);
 
-displayBtn.addEventListener('click', function(){
+displayBtn.addEventListener('click', function () {
     divEl.classList.remove("hidden");
 })
 
-videoEl.addEventListener("click", ()=>{
+videoEl.addEventListener("click", (event) => {
+    event.stopPropagation();
     videoEl.play();
 })
 
-divEl.addEventListener('click', ()=>{
+divEl.addEventListener('click', () => {
     divEl.classList.add("hidden");
 })
