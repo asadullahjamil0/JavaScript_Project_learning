@@ -15,10 +15,13 @@ function handleClick(e) {
 }
 
 cntr.addEventListener('click', function addColor(e) {
-    console.log(e);
-    let rndmClr = `rgb(${randomNumber()}, ${randomNumber()}, ${randomNumber()})`;
-    document.body.style.backgroundColor = rndmClr;
-    btn.style.backgroundColor = `rgb(${randomNumber()}, ${randomNumber()}, ${randomNumber()})`;
+    let rndmClr = "";
+   let a =  setInterval(() => {
+        rndmClr = `rgb(${randomNumber()}, ${randomNumber()}, ${randomNumber()})`;
+        document.body.style.backgroundColor = rndmClr;
+        btn.style.backgroundColor = `rgb(${randomNumber()}, ${randomNumber()}, ${randomNumber()})`;
+    }, 2000);
+    console.log(a);
 })
 
 //Event Bubbling
