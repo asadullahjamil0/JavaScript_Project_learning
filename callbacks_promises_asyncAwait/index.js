@@ -66,26 +66,26 @@
 // })
 
 //Another Example of using promise
-function getData(dataId) {
-    return new Promise((resolve, reject) => {
-        setTimeout(() => {
-            console.log("Data" + dataId);
-            resolve("Success");
-            // reject("Rejected")
-        }, 3000)
-    })
-}
+// function getData(dataId) {
+//     return new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             console.log("Data" + dataId);
+//             resolve("Success");
+//             // reject("Rejected")
+//         }, 3000)
+//     })
+// }
 
-console.log("Getting data1...");
-getData(1).then(() => {
-    console.log("Getting data2...");
-    return getData(2);
-}).then(() => {
-    console.log("Getting data3...");
-    return getData(3);
-}).then((res) => {
-    console.log(res);
-})
+// console.log("Getting data1...");
+// getData(1).then(() => {
+//     console.log("Getting data2...");
+//     return getData(2);
+// }).then(() => {
+//     console.log("Getting data3...");
+//     return getData(3);
+// }).then((res) => {
+//     console.log(res);
+// })
 
 // getData(1).then((res) => {
 //     console.log(res);
@@ -102,3 +102,38 @@ getData(1).then(() => {
 // }).catch((rej) => {
 //     console.log(rej);
 // })
+
+
+//Async-Await instead of promises
+// async function api() {
+//     setTimeout(() => {
+//         console.log("Wheather Data");
+//     }, 3000)
+// }
+
+// async function getWheatherData() {
+//     await api();
+// }
+
+// getWheatherData();
+
+function getData(dataId, getNextData) {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            console.log("Data", dataId);
+            resolve("success");
+        }, 2000)
+    })
+}
+
+async function displayData() {
+    console.log("Getting data1...");
+    await getData(1)
+    console.log("Getting data2...");
+    await getData(2);
+    console.log("Getting data3...");
+    await getData(3).then((res) => {
+        console.log(res);
+    });
+
+}
