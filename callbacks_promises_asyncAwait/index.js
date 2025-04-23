@@ -10,17 +10,17 @@
 // console.log("Fifth");
 
 // // More in Callback functions
-function getData(dataId, getNextData) {
-    return promise =  new Promise((resolve,reject) =>{
-        setTimeout(() => {
-            console.log("Data", dataId);
-            resolve("success")
-            if (getNextData) {
-                getNextData();
-            }
-        }, 2000)
-    })
-}
+// function getData(dataId, getNextData) {
+//     return promise =  new Promise((resolve,reject) =>{
+//         setTimeout(() => {
+//             console.log("Data", dataId);
+//             resolve("success")
+//             if (getNextData) {
+//                 getNextData();
+//             }
+//         }, 2000)
+//     })
+// }
 
 //This is called callback Hell in JavaScript which we can say nested callbacks
 // getData(12, () => {
@@ -37,7 +37,57 @@ function getData(dataId, getNextData) {
 //     });
 // });
 
-// let promise = new Promise((resolve, reject) => {
-//     console.log("I am a promise");
-//     reject("Reject");
+// const getPromise1 = () => {
+//     return new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             console.log("Data1 Successfully fetched!");
+//             resolve("success");
+//             // reject("Rejected");
+//         }, 4000)
+//     })
+// }
+
+// const getPromise2 = () => {
+//     return new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             console.log("Data2 Successfully fetched!");
+//             resolve("success");
+//             // reject("Rejected");
+//         }, 4000)
+//     })
+// }
+
+// console.log("Fetching data1...");
+// getPromise1().then((res) => {
+//     console.log("Fetching Data2...");
+//     getPromise2().then((res) => {
+//         console.log(res);
+//     })
 // })
+
+//Another Example of using promise
+function getData(dataId) {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            console.log("Data" + dataId);
+            resolve("Success");
+            // reject("Rejected")
+        }, 3000)
+    })
+}
+
+getData(1).then((res) => {
+    console.log(res);
+    getData(2).then((res) => {
+        console.log(res);
+        getData(3).then((res) => {
+            console.log(res);
+        }).catch((rej) => {
+            console.log(rej);
+        })
+    }).catch((rej) => {
+        console.log(rej);
+    })
+}).catch((rej) => {
+    console.log(rej);
+})
