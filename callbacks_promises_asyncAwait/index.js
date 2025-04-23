@@ -76,18 +76,29 @@ function getData(dataId) {
     })
 }
 
-getData(1).then((res) => {
+console.log("Getting data1...");
+getData(1).then(() => {
+    console.log("Getting data2...");
+    return getData(2);
+}).then(() => {
+    console.log("Getting data3...");
+    return getData(3);
+}).then((res) => {
     console.log(res);
-    getData(2).then((res) => {
-        console.log(res);
-        getData(3).then((res) => {
-            console.log(res);
-        }).catch((rej) => {
-            console.log(rej);
-        })
-    }).catch((rej) => {
-        console.log(rej);
-    })
-}).catch((rej) => {
-    console.log(rej);
 })
+
+// getData(1).then((res) => {
+//     console.log(res);
+//     getData(2).then((res) => {
+//         console.log(res);
+//         getData(3).then((res) => {
+//             console.log(res);
+//         }).catch((rej) => {
+//             console.log(rej);
+//         })
+//     }).catch((rej) => {
+//         console.log(rej);
+//     })
+// }).catch((rej) => {
+//     console.log(rej);
+// })
