@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: rgb(0, 32, 0);
+            color: white;
+        }
+
+        @keyframes blink {
+            0% {
+                opacity: 0;
+            }
+
+            50% {
+                opacity: 1;
+            }
+
+            100% {
+                opacity: 0;
+            }
+        }
+        .dot{
+            animation: blink 1s infinite;
+        }
+    </style>
+</head>
+
+<body>
+    <span id="dot"></span>
+    <p id="content-el"></p>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
