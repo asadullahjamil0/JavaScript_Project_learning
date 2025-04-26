@@ -10,29 +10,15 @@
             background-color: rgb(0, 32, 0);
             color: white;
         }
-
-        @keyframes blink {
-            0% {
-                opacity: 0;
-            }
-
-            50% {
-                opacity: 1;
-            }
-
-            100% {
-                opacity: 0;
-            }
-        }
-        .dot{
+        #dot{
             animation: blink 1s infinite;
         }
     </style>
 </head>
 
 <body>
-    <span id="dot"></span>
-    <p id="content-el"></p>
+    <span id="dot">...</span>
+    <section id="content-el"></section>
 
 
     <script src="script.js"></script>
