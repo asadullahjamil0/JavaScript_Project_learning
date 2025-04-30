@@ -28,11 +28,21 @@ async function sleep(n) {
     //Destructuring
     const obj = {
         'name': "AsadUllah",
-        'username': 'asad234'
+        'username': 'asad234',
+        address: {
+            str: "Main Str",
+            house: 5,
+            location: {
+                City: "Sheikhupura",
+                Division: "Lahore",
+                Country: "Pakistan"
+            }
+        }
     }
 
-    let { name, username } = obj
-    console.log(name, username);
+    //Nested Destructuring
+    let { name, username, address: { str, house, location: { City, Division, Country } } } = obj
+    console.log(`Name:${name}, Username:${username}, Street:${str}, House No:${house}, City:${City}, Division:${Division} Country:${Country}`);
 
 })();
 
