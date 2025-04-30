@@ -20,6 +20,12 @@ async function sleep(n) {
 // Spread Operator
 (async function main() {
     let [x, y, ...rest] = [1, 3, 7, 8, 9, 10, 11, 12, 13, 14, 15];
+    
+    // Concatenation through Spread operator
+    let arr1 = [1, 2, 3, 4]
+    let arr2 = [5, 6, 7, 8]
+    let arr3 = [...arr1, ...arr2]
+    console.log("Cooncatenation " + arr3);
 
     for (let e of rest) {
         console.log(e);
