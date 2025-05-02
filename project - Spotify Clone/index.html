@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify – Web Player</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="utility.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <div class="container flex bg-black">
+        <div class="left">
+            <div class="home m-1 p-1 bg-grey rounded">
+                <div class="logo"><img class="invert" src="logo.svg" alt=""></div>
+                <ul>
+                    <li><img class="invert" src="home.svg" alt="Home">Home</li>
+                    <li><img class="invert" src="search.svg" alt="Search">Search</li>
+                </ul>
+            </div>
+            <div class="library rounded m-1 p-1 bg-grey">
+                <div class="heading">
+                    <img class="invert" src="playList.svg" alt="">
+                    <h2>
+                        Your Library
+                    </h2>
+                </div>
+
+                <div class="songsList">
+                    <ul>
+
+                    </ul>
+                </div>
+                <div class="footer">
+                    <div class="link-container"><a href="https://www.spotify.com/pk-en/legal/"><span>Legal</span></a>
+                    </div>
+                    <div class="link-container"><a href="https://www.spotify.com/pk-en/safetyandprivacy/"><span>Safety
+                                &amp;
+                                Privacy Center</span></a></div>
+                    <div class="link-container"><a
+                            href="https://www.spotify.com/pk-en/legal/privacy-policy/"><span>Privacy
+                                Policy</span></a></div>
+                    <div class="link-container"><a
+                            href="https://www.spotify.com/pk-en/legal/cookies-policy/"><span>Cookies</span></a></div>
+                    <div class="link-container"><a
+                            href="https://www.spotify.com/pk-en/legal/privacy-policy/#s3"><span>About
+                                Ads</span></a></div>
+                    <div class="link-container"><a
+                            href="https://www.spotify.com/pk-en/accessibility/"><span>Accessibility</span></a></div>
+
+                </div>
+            </div>
+
+        </div>
+        <div class="right bg-grey rounded">
+            <div class="header">
+                <div class="nav">
+                    <svg width="24" height="24" class="white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                        <path
+                            d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z" />
+                    </svg>
+                    <svg width="24" height="24" class="white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                        <path
+                            d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z" />
+                    </svg>
+                </div>
+                <div class="buttons">
+                    <button class="signupBtn">Sign up</button>
+                    <button class="loginBtn">Log in</button>
+                </div>
+            </div>
+            <div class="spotifyPlaylists">
+                <h1>Spotify PlayList</h1>
+                <div class="cardContainer">
+                    <div class="card">
+                        <div class="play">
+                            <div class="playButton">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                                    <path
+                                        d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z"
+                                        fill="black"></path>
+                                </svg>
+                            </div>
+
+                        </div>
+                        <img src="https://i.scdn.co/image/ab67706f0000000295ae4942f9478ff121f26364" alt="">
+                        <h2>Pop Rising</h2>
+                        <p>Who's now and next in pop. Cover: Mark Ambor.</p>
+                    </div>
+
+
+
+                    <div class="card">
+                        <div class="play">
+                            <div class="playButton">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                                    <path
+                                        d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z"
+                                        fill="black"></path>
+                                </svg>
+                            </div>
+                        </div>
+                        <img src="https://i.scdn.co/image/ab67706f0000000295ae4942f9478ff121f26364" alt="">
+                        <h2>Pop Rising</h2>
+                        <p>Who's now and next in pop. Cover: Mark Ambor.</p>
+                    </div>
+
+
+                </div>
+                <div class="playBar">
+                    <div class="seekBar">
+                        <div class="circle">
+
+                        </div>
+                    </div>
+                    <div class="aboveBar">
+
+
+                        <div class="songInfo">
+
+                        </div>
+                        <div class="songButtons">
+
+                            <img id="previous" src="previous.svg" alt="">
+                            <img id="play" src="musicButton.svg" alt="">
+                            <img id="next" src="next.svg" alt="">
+                        </div>
+                        <div class="songTime">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> 
+
+    <script src="script.js"></script>
+</body>
+
+</html>
