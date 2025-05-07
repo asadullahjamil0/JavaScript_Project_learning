@@ -16,7 +16,7 @@ function convertSecondsToMinutes(seconds) {
 }
 
 async function getSongs() {
-    let a = await fetch('http://127.0.0.1:5500/JavaSript/project%20-%20Spotify%20Clone/Songs/')
+    let a = await fetch('http://127.0.0.1:5500/Songs/')
     let response = await a.text();
     let div = document.createElement("div");
     div.innerHTML = response;
@@ -34,7 +34,7 @@ async function getSongs() {
 
 const playMusic = (track) => {
     // let audio = new Audio("/JavaSript/project%20-%20Spotify%20Clone/Songs/ " + track)
-    currentSong.src = "/JavaSript/project%20-%20Spotify%20Clone/Songs/" + track;
+    currentSong.src = "/Songs/" + track;
     currentSong.play();
     play.src = "pause.svg"
     document.querySelector(".songInfo").innerHTML = track;
